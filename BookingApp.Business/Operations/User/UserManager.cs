@@ -84,9 +84,9 @@ namespace BookingApp.Business.Operations.User
 
             }
 
-            var unprotectedText = _protector.Unprotect(userEntity.Password);
-           
-            if(unprotectedPassword == user.Password)
+            var unprotectedPassword = _protector.Unprotect(userEntity.Password);
+
+            if (unprotectedPassword == user.Password)
             {
                 return new ServiceMessage<UserInfoDto>
                 {
