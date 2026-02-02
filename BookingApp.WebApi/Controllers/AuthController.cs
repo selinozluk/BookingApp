@@ -2,6 +2,7 @@
 using BookingApp.Business.Operations.User.Dtos;
 using BookingApp.WebApi.Jwt;
 using BookingApp.WebApi.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -85,6 +86,14 @@ namespace BookingApp.WebApi.Controllers
              Token = token
 
             });
+        }
+
+        [HttpGet("me")]
+        [Authorize] // Token yoksa cevap da yok.
+
+        public IActionResult GetMyUser()
+        {
+            return Ok();
         }
     }
 }
