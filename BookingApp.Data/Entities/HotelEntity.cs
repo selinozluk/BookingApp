@@ -19,8 +19,6 @@ namespace BookingApp.Data.Entities
 
        public AccomodationType AccomodationType { get; set; }
 
-
-
         // Relational Property
 
         public ICollection<HotelFeatureEntity> HotelFeatures { get; set; }
