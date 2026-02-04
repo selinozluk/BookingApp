@@ -11,7 +11,7 @@ namespace BookingApp.Data.Repositories
          where TEntity : class
     {
         void Add(TEntity entity);
-        void Delete(TEntity entity);
+        void Delete(TEntity entity, bool softDelete = true);
 
         void Delete(int id);
 
@@ -21,7 +21,6 @@ namespace BookingApp.Data.Repositories
         TEntity Get(Expression<Func<TEntity,bool>> predicate);
         
         IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate = null);
-
 
 
 

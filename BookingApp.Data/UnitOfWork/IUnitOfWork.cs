@@ -16,6 +16,6 @@ namespace BookingApp.Data.UnitOfWork
 
         Task CommitTransaction();
 
-        Task RollbackTransaction();
+        Task RollBackTransaction();
     }
 }

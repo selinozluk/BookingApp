@@ -41,7 +41,7 @@ namespace BookingApp.Data.UnitOfWork
             // Bu kodlar Garbage Collector'ı direkt çalıştırır.
         }
 
-        public async Task RollbackTransaction()
+        public async Task RollBackTransaction()
         {
             await _transaction.RollbackAsync();
         }
